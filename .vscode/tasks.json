@@ -4,13 +4,19 @@
     {
       "label": "Run Backend",
       "type": "shell",
-      "command": "cd backend && mvn spring-boot:run",
+      "command": "./scripts/run-backend.sh",
       "problemMatcher": []
     },
     {
       "label": "Run Frontend",
       "type": "shell",
       "command": "cd frontend && npm run dev -- --host 0.0.0.0",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Full Stack",
+      "type": "shell",
+      "command": "./scripts/codespaces-run.sh",
       "problemMatcher": []
     }
   ]

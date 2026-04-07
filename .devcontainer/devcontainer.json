@@ -3,7 +3,7 @@
   "image": "mcr.microsoft.com/devcontainers/universal:2-linux",
   "features": {
     "ghcr.io/devcontainers/features/java:1": {
-      "version": "17"
+      "version": "21"
     },
     "ghcr.io/devcontainers/features/node:1": {
       "version": "20"
@@ -20,7 +20,7 @@
       "onAutoForward": "openBrowser"
     }
   },
-  "postCreateCommand": "cd frontend && npm install",
+  "postCreateCommand": "cd frontend && npm install && chmod +x ../scripts/*.sh",
   "customizations": {
     "vscode": {
       "extensions": [

@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Start backend and frontend for GitHub Codespaces
-(cd backend && mvn spring-boot:run) &
+(./scripts/run-backend.sh) &
 (cd frontend && npm run dev -- --host 0.0.0.0) &
 
 wait

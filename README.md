@@ -57,6 +57,19 @@ Website runs at: `http://localhost:5173`
    - `5173` -> React UI
    - `8080` -> Spring API
 
+
+### Codespaces troubleshooting
+- If you get `No such file or directory` for scripts, run:
+  ```bash
+  git pull
+  chmod +x scripts/*.sh
+  ```
+- If backend fails with `Unrecognized option: --enable-native-access=ALL-UNNAMED`, run backend with:
+  ```bash
+  ./scripts/run-backend.sh
+  ```
+  This script removes that JVM flag from environment variables before starting Spring Boot.
+
 ## CORS
 Backend CORS is configured for local frontend development origins (`localhost` / `127.0.0.1` on any port) and permits preflight `OPTIONS` requests.
 
