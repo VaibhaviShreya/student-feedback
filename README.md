@@ -39,6 +39,10 @@ Website runs at: `http://localhost:5173`
    - feedback list
    - feedback submission form
 
+
+## CORS
+Backend CORS is configured for local frontend development origins (`localhost` / `127.0.0.1` on any port) and permits preflight `OPTIONS` requests.
+
 ## API endpoints
 - `POST /api/auth/register`
 - `POST /api/auth/login`
