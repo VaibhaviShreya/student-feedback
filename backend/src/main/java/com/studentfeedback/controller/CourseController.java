@@ -36,8 +36,8 @@ public class CourseController {
 
     @DeleteMapping("/{id}")
     @PreAuthorize("hasRole('ADMIN')")
-    public ResponseEntity<Void> deleteCourse(@PathVariable Long id) {
-        courseRepository.deleteById(id);
+    public ResponseEntity<Void> deleteCourse(@PathVariable long id) {
+        courseRepository.deleteById(Long.valueOf(id));
         return ResponseEntity.noContent().build();
     }
 }

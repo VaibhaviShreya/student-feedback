@@ -9,6 +9,8 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 @Component
 public class DataInitializer implements CommandLineRunner {
     private final UserRepository userRepository;
@@ -32,11 +34,20 @@ public class DataInitializer implements CommandLineRunner {
         }
 
         if (courseRepository.count() == 0) {
-            Course c1 = new Course();
-            c1.setCode("CS101");
-            c1.setTitle("Introduction to Programming");
-            c1.setInstructor("Dr. Smith");
-            courseRepository.save(c1);
+            courseRepository.saveAll(List.of(
+                    buildCourse("CS101", "Introduction to Programming", "Dr. Smith"),
+                    buildCourse("CS205", "Data Structures", "Prof. Patel"),
+                    buildCourse("CS310", "Database Systems", "Dr. Chen"),
+                    buildCourse("CS402", "Software Engineering", "Prof. Williams")
+            ));
         }
+    }
+
+    private Course buildCourse(String code, String title, String instructor) {
+        Course c = new Course();
+        c.setCode(code);
+        c.setTitle(title);
+        c.setInstructor(instructor);
+        return c;
     }
 }

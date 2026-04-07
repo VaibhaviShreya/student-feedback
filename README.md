@@ -87,6 +87,7 @@ Website runs at: `http://localhost:5173`
   ./scripts/run-backend.sh
   ```
   This script removes that JVM flag from environment variables before starting Spring Boot.
+- If backend startup shows `403 Forbidden` while downloading Maven artifacts, that is a network/registry access issue in your environment (not API auth). You must allow access to Maven Central or configure a Maven proxy/mirror.
 
 ## CORS
 Backend CORS is configured for local frontend development origins (`localhost` / `127.0.0.1` on any port) and permits preflight `OPTIONS` requests.

@@ -39,7 +39,7 @@ public class FeedbackController {
 
     @PostMapping
     public ResponseEntity<FeedbackResponse> submitFeedback(@Valid @RequestBody FeedbackRequest request, Authentication authentication) {
-        Course course = courseRepository.findById(request.courseId()).orElseThrow();
+        Course course = courseRepository.findById(Long.valueOf(request.courseId())).orElseThrow();
         User student = userRepository.findByUsername(authentication.getName()).orElseThrow();
 
         Feedback feedback = new Feedback();
