@@ -64,6 +64,19 @@ Website runs at: `http://localhost:5173`
   git pull
   chmod +x scripts/*.sh
   ```
+- If you get `cd: backend: No such file or directory`, you are already inside `backend/`. Use:
+  ```bash
+  mvn spring-boot:run
+  ```
+  or from repo root:
+  ```bash
+  ./scripts/run-backend.sh
+  ```
+- If you get `mvn: command not found`, run backend using wrapper script (it checks for `mvnw` or `mvn` and shows a clear error):
+  ```bash
+  ./scripts/run-backend.sh
+  ```
+
 - If your terminal is inside `backend/`, use:
   ```bash
   ./scripts/codespaces-run.sh
