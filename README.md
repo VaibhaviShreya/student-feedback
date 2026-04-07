@@ -40,6 +40,23 @@ Website runs at: `http://localhost:5173`
    - feedback submission form
 
 
+## Run in GitHub Codespaces
+1. Push this repository to GitHub.
+2. Open the repo in **Code** -> **Codespaces** -> **Create codespace on main**.
+3. Wait for the container setup (`postCreateCommand` installs frontend dependencies).
+4. Start both services from terminal:
+   ```bash
+   ./scripts/codespaces-run.sh
+   ```
+   or in separate terminals:
+   ```bash
+   cd backend && mvn spring-boot:run
+   cd frontend && npm run dev -- --host 0.0.0.0
+   ```
+5. Open forwarded ports:
+   - `5173` -> React UI
+   - `8080` -> Spring API
+
 ## CORS
 Backend CORS is configured for local frontend development origins (`localhost` / `127.0.0.1` on any port) and permits preflight `OPTIONS` requests.
 
