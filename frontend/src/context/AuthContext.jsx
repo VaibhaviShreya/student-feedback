@@ -12,6 +12,8 @@ export function AuthProvider({ children }) {
   }, [token])
 
   const login = async (usernameInput, password, mode = 'login') => {
+    // Avoid sending stale/invalid JWT while trying to login/register.
+    setToken(null)
     const { data } = await client.post(`/auth/${mode}`, { username: usernameInput, password })
     localStorage.setItem('token', data.token)
     localStorage.setItem('username', data.username)
