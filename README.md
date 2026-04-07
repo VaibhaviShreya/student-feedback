@@ -64,6 +64,11 @@ Website runs at: `http://localhost:5173`
   git pull
   chmod +x scripts/*.sh
   ```
+- If your terminal is inside `backend/`, use:
+  ```bash
+  ./scripts/codespaces-run.sh
+  ```
+  (This wrapper moves to repo root and runs the main script.)
 - If backend fails with `Unrecognized option: --enable-native-access=ALL-UNNAMED`, run backend with:
   ```bash
   ./scripts/run-backend.sh
