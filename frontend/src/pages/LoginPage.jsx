@@ -36,7 +36,7 @@ function LoginPage() {
         <button type="button" className="secondary" onClick={() => setMode(mode === 'login' ? 'register' : 'login')}>
           Switch to {mode === 'login' ? 'Register' : 'Login'}
         </button>
-        <p>Admin demo account: <strong>admin / admin123</strong></p>
+        <p>Admin: <strong>admin / admin123</strong> | Teacher: <strong>teacher / teacher123</strong></p>
       </form>
     </div>
   )

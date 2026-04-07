@@ -25,7 +25,7 @@ public class CourseController {
     }
 
     @PostMapping
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN','TEACHER')")
     public ResponseEntity<Course> createCourse(@Valid @RequestBody CourseRequest request) {
         Course course = new Course();
         course.setCode(request.code());
@@ -35,7 +35,7 @@ public class CourseController {
     }
 
     @DeleteMapping("/{id}")
-    @PreAuthorize("hasRole('ADMIN')")
+    @PreAuthorize("hasAnyRole('ADMIN','TEACHER')")
     public ResponseEntity<Void> deleteCourse(@PathVariable long id) {
         courseRepository.deleteById(Long.valueOf(id));
         return ResponseEntity.noContent().build();

@@ -18,9 +18,9 @@ mvn spring-boot:run
 ```
 Backend runs at: `http://localhost:8080`
 
-### Default admin account
-- username: `admin`
-- password: `admin123`
+### Default accounts
+- admin: `admin` / `admin123`
+- teacher: `teacher` / `teacher123`
 
 ## Frontend setup
 ```bash

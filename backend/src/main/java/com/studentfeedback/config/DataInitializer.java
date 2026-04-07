@@ -33,6 +33,14 @@ public class DataInitializer implements CommandLineRunner {
             userRepository.save(admin);
         }
 
+        if (!userRepository.existsByUsername("teacher")) {
+            User teacher = new User();
+            teacher.setUsername("teacher");
+            teacher.setPassword(passwordEncoder.encode("teacher123"));
+            teacher.setRole(Role.TEACHER);
+            userRepository.save(teacher);
+        }
+
         if (courseRepository.count() == 0) {
             courseRepository.saveAll(List.of(
                     buildCourse("CS101", "Introduction to Programming", "Dr. Smith"),
