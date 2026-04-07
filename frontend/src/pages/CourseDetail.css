@@ -1,0 +1,100 @@
+.course-detail-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.course-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 16px;
+  padding: 2.5rem;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.course-header .course-code {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.course-header h1 {
+  margin: 0 0 1rem;
+  font-size: 2rem;
+}
+
+.course-header p {
+  margin: 0;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+.course-header .instructor {
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.course-content section {
+  margin-bottom: 2.5rem;
+}
+
+.course-content h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.add-feedback-btn {
+  width: 100%;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.add-feedback-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.cancel-btn {
+  width: 100%;
+  padding: 1rem;
+  background: #f1f5f9;
+  color: #64748b;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.already-submitted {
+  background: #ecfdf5;
+  color: #059669;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.feedbacks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.no-feedbacks {
+  text-align: center;
+  color: #666;
+  padding: 3rem;
+  background: #f8fafc;
+  border-radius: 12px;
+}
